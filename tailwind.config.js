@@ -15,7 +15,8 @@ module.exports = {
         'pool': 'url("/pool.jpg")',
         'dining': 'url("/dining.jpg")',
         'bar': 'url("/bar.jpg")',
-        'ubicacion': 'url("/ubicacion.jpg")'
+        'ubicacion': 'url("/ubicacion.jpg")',
+        'bedroom': 'url("/bedroom.jpg")'
       },
     },
   },

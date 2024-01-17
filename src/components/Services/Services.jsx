@@ -1,30 +1,45 @@
-import React from 'react'
+import React from "react";
+import Accordion from "../Accordian/Accordion";
 
 const Services = () => {
   return (
-    <div className='h-screen bg-slate-500 w-screen container'>
-        <div className='border-2 h-96 grid grid-rows-3'>
-            <div className='border-2 border-black'>
-                <div className='border-2 border-red-700 flex items-center h-full'>{/*Add a background image here */}
-                    <h3 className='text-3xl'>Ver nuestro bar</h3>
-                    {/*Place an Arrow Icon Here */}
-                </div>
-            </div>
-            <div className='border-2 border-black'>
-            <div className='border-2 border-red-700 flex items-center h-full'>{/*Add a background image here */}
-                    <h3 className='text-3xl'>Ver nuestra pileta</h3>
-                    {/*Place an Arrow Icon Here */}
-                </div>
-            </div>
-            <div className='border-2 border-black'>
-            <div className='border-2 border-red-700 flex items-center h-full'> {/*Add a background image here */}
-                    <h3 className='text-3xl'>Ver nuestra cocina</h3>
-                    {/*Place an Arrow Icon Here */}
-                </div>
-            </div>
+    <div className="h-fit w-full container bg-slate-900">
+      <div className="w-full h-10">
+        <h1 className="font-bold text-3xl text-center p-2 text-white">
+          Servicios Extra
+        </h1>
+      </div>
+      <div className="flex-col flex p-2 lg:grid lg:grid-cols-3">
+        <div className="p-2">
+          <Accordion
+            title={"Visita Nuestra Pileta"}
+            answer={
+              "Nuestra pileta es una de las mejores piletas en el norte. Cuenta con 3 metros de profundidad y 6 metros de largo y ancho. Realmente una hermosa pileta con el mejor sistema de filtracion en el norte."
+            }
+            bg={"bg-pool"}
+          />
         </div>
+        <div className="p-2">
+          <Accordion
+            title={"Visita Nuestra Cocina"}
+            answer={
+              "En nuestra cocina tenemos el head chef amante de la comida listo para servite las mejores recetas caseras con los ingredientes mas frescos a tu gusto."
+            }
+            bg={"bg-dining"}
+          />
+        </div>
+        <div className="p-2">
+          <Accordion
+            title={"Visita Nuestra Pileta"}
+            answer={
+              "Nuestr pileta es una de las mejores piletas. Cuenta con 3 metros de prfundidad y 6 metros de largo y ancho. Realmente una hermosa piscina con el mejor istma de filtracion en el norte."
+            }
+            bg={"bg-bar"}
+          />
+        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Services
+export default Services;
