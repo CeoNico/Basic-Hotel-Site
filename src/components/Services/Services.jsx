@@ -1,42 +1,44 @@
 import React from "react";
-import Accordion from "../Accordian/Accordion";
+import Accordion, { AccordianItem } from "../Accordian/Accordion";
 
 const Services = () => {
   return (
-    <div className="h-fit w-full container bg-slate-900">
-      <div className="w-full h-10">
-        <h1 className="font-bold text-3xl text-center p-2 text-white">
-          Servicios Extra
+    <div className="min-h-fit w-screen">
+      <div className="p-4">
+        <h1 className="text-center font-bold text-2xl">
+          Servicios Destacados
         </h1>
       </div>
-      <div className="flex-col flex p-2 lg:grid lg:grid-cols-3">
-        <div className="p-2">
-          <Accordion
-            title={"Visita Nuestra Pileta"}
-            answer={
-              "Nuestra pileta es una de las mejores piletas en el norte. Cuenta con 3 metros de profundidad y 6 metros de largo y ancho. Realmente una hermosa pileta con el mejor sistema de filtracion en el norte."
-            }
-            bg={"bg-pool"}
-          />
-        </div>
-        <div className="p-2">
-          <Accordion
-            title={"Visita Nuestra Cocina"}
-            answer={
-              "En nuestra cocina tenemos el head chef amante de la comida listo para servite las mejores recetas caseras con los ingredientes mas frescos a tu gusto."
-            }
-            bg={"bg-dining"}
-          />
-        </div>
-        <div className="p-2">
-          <Accordion
-            title={"Visita Nuestra Pileta"}
-            answer={
-              "Nuestr pileta es una de las mejores piletas. Cuenta con 3 metros de prfundidad y 6 metros de largo y ancho. Realmente una hermosa piscina con el mejor istma de filtracion en el norte."
-            }
-            bg={"bg-bar"}
-          />
-        </div>
+      <div className="p-4 lg:px-10 flex items-center justify-center">
+        <Accordion className="max-w-full lg:min-w-full">
+          <AccordianItem value="1" trigger="Nuestra Pileta">
+            <div className="bg-pool bg-center bg-cover h-[400px] lg:h-[500px] rounded shadow-lg border-t border-t-slate-800 shadow-slate-950 lg:">
+            </div>
+            <p className="px-4 py-6 font-semibold text-lg">
+              Nuestra pileta cuenta con dos metros de profundidad 4 metros de
+              larga y 2 metros de ancha. Es una de las mejores piletes en el
+              norte argentino. Veni disfrutala hoy
+            </p>
+          </AccordianItem>
+          <AccordianItem value="2" trigger="Nuestra Cocina">
+            <div className="bg-dining bg-cover bg-center h-[300px] lg:h-[400px] rounded shadow-lg border-t border-t-slate-800 shadow-slate-950 lg:">
+            </div>
+            <p className="px-4 py-6 font-semibold text-lg">
+              Nuestra pileta cuenta con dos metros de profundidad 4 metros de
+              larga y 2 metros de ancha. Es una de las mejores piletes en el
+              norte argentino. Veni disfrutala hoy
+            </p>
+          </AccordianItem>
+          <AccordianItem value="3" trigger="Nuestro Bar">
+            <div className="bg-bar bg-cover bg-center h-48 lg:h-[500px] rounded shadow-lg border-t border-t-slate-800 shadow-slate-950 lg:">
+            </div>
+            <p className="px-4 py-6 font-semibold text-lg">
+              Nuestra pileta cuenta con dos metros de profundidad 4 metros de
+              larga y 2 metros de ancha. Es una de las mejores piletes en el
+              norte argentino. Veni disfrutala hoy
+            </p>
+          </AccordianItem>
+        </Accordion>
       </div>
     </div>
   );
